@@ -9,13 +9,16 @@ st.title("Youtube Comment Sentiment Analysis")
 st.markdown("Aplikasi ini merupakan proyek tugas akhir saya untuk kelas Fullstack di Sanber")
 
 #baca data
+df = pd.read_csv("Dataset_youtube_comments.csv")
+df.drop(['like_count', 'public'], axis=1, inplace=True)
+
+if st.checkbox("Show Data"):
+    st.write(df.head(50))
+
+#menampilkan wordcloud    
 data = pd.read_csv("data_analisis.csv")
 data.drop(['comment_en'], axis=1, inplace=True)
 
-if st.checkbox("Show Data"):
-    st.write(data.head(50))
-
-#menampilkan wordcloud       
 comment_words = ' '
 stopwords = set(STOPWORDS)
 
