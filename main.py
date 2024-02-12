@@ -6,7 +6,8 @@ import plotly.express as px
 
 #set_page_config(adalah sebuah metode yang digunakan untuk mengubah parameter dari page kita)
 st.title("Youtube Comment Sentiment Analysis")
-st.markdown("Aplikasi ini merupakan proyek tugas akhir saya untuk kelas Fullstack di Sanber")
+st.markdown('''Ini merupakan hasil analisa sentimen masyarakat terhadap pembangunan SPB Hidrogen di Indonesia.
+            Data diambil dari komentar pada konten Youtube dengan keyword SPBU Hidrogen''')
 
 #baca data
 df = pd.read_csv("Dataset_youtube_comments.csv")
