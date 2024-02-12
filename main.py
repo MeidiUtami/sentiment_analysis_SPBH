@@ -13,7 +13,7 @@ df = pd.read_csv("Dataset_youtube_comments.csv")
 df.drop(['like_count', 'public'], axis=1, inplace=True)
 
 if st.checkbox("Show Data"):
-    st.write(df.head(50))
+    st.write(df)
 
 #menampilkan wordcloud    
 data = pd.read_csv("data_analisis.csv")
