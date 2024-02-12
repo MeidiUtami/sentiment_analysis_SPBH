@@ -47,3 +47,5 @@ if select == "Histogram":
 else:
         fig = px.pie(sentiment, values='comments', names='Sentiment')
         st.plotly_chart(fig)
+
+st.caption('Copyright (c) Meidi Utami')
